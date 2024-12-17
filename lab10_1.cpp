@@ -2,22 +2,18 @@
 using namespace std;
 
 int main(){
-    int count[5] = {}; // Declare array count for counting A, B, C, D, F and initialize all element = 0
+    int count[5] = {}; 
     char grade;
-    int totalStudents = 0;  // To keep track of total students
-
+    int totalStudents = 0; 
     cout << "Please input grade of each student (A-F) or input 0 to exit." << endl;
 
     do {
         cout << "Student [" << totalStudents + 1 << "]: ";
         cin >> grade;
 
-        // Check if the input is '0' to terminate the loop
         if(grade == '0') {
-            break; // Exit the loop
+            break;
         }
-
-        // Check for valid grade inputs
         if(grade == 'A') {
             count[0]++;
             totalStudents++;
@@ -34,13 +30,11 @@ int main(){
             count[4]++;
             totalStudents++;
         } else {
-            // Handle invalid input
             cout << "Wrong input. Please input again." << endl;
         }
 
-    } while(true); // Continue until '0' is input
+    } while(true);
 
-    // Print the summary of grades
     cout << "In total " << totalStudents << " students." << endl;
     cout << "A = " << count[0] << ", ";
     cout << "B = " << count[1] << ", ";
